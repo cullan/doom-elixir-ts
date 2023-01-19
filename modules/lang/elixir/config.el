@@ -82,6 +82,14 @@ See `http://credo-ci.org/'."
     (add-to-list 'flycheck-checkers 'elixir-credo t)))
 
 
+(use-package! elixir-format
+  :config
+  (map! :after elixir-ts-mode
+        :localleader
+        :map elixir-ts-mode-map
+        "f" #'elixir-format))
+
+
 (use-package! exunit
   :hook (elixir-ts-mode . exunit-mode)
   :init
