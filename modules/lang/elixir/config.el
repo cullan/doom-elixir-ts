@@ -87,6 +87,10 @@ See `http://credo-ci.org/'."
   (map! :after elixir-ts-mode
         :localleader
         :map elixir-ts-mode-map
+        "f" #'elixir-format)
+  (map! :after heex-ts-mode
+        :localleader
+        :map heex-ts-mode-map
         "f" #'elixir-format))
 
 
